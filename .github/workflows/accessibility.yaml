@@ -24,7 +24,7 @@ jobs:
 
       - name: Start server
         run: |
-          serve -s build &
+          serve -s build -l 3000 &
           sleep 5 # Wait for server to start
       - name: Wait for app
         run: |
