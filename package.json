@@ -27,7 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "axe": "docker run --rm -p 3000:3000 --shm-size=1g -e TARGET_URL=\"http://localhost:3000\" -e SERVICE_ID=\"uomoecommerce39192\" -e TOOL=axe -e AXE_MODE=all accessibility-hub-runner:3.0"
   },
   "eslintConfig": {
     "extends": [

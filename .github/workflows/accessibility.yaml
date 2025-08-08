@@ -15,9 +15,17 @@ jobs:
           node-version: 20.x
       - name: Install dependencies
         run: npm install
-      - name: Start app
+        
+      - name: Build app
+        run: npm run build
+
+      - name: Install static server
+        run: npm install -g http-server
+
+      - name: Start server
         run: |
-          HOST=0.0.0.0 PORT=3000 npm start &
+          http-server ./build -p 3000 &
+          sleep 5 # Wait for server to start
       - name: Wait for app
         run: |
           echo "Waiting for app to be ready..."
