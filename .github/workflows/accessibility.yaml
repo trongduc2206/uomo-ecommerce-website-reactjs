@@ -40,7 +40,7 @@ jobs:
           exit 1
       - name: Debug fetch home page HTML
         run: curl -s http://localhost:3000 | head -n 40
-      - name: Debug: Screenshot page with Playwright
+      - name: Debug Screenshot page with Playwright
         run: |
           npm install -g playwright
           npx playwright install chromium
