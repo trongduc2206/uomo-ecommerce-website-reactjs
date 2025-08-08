@@ -40,6 +40,22 @@ jobs:
           exit 1
       - name: Debug fetch home page HTML
         run: curl -s http://localhost:3000 | head -n 40
+      - name: Debug: Screenshot page with Playwright
+        run: |
+          npm install -g playwright
+          npx playwright install chromium
+          node - <<EOF
+          const { chromium } = require('playwright');
+          (async () => {
+            const browser = await chromium.launch();
+            const page = await browser.newPage();
+            await page.goto('http://localhost:3000', { waitUntil: 'networkidle' });
+            await page.screenshot({ path: 'page.png' });
+            const content = await page.content();
+            console.log('PAGE CONTENT:', content.slice(0, 1000));
+            await browser.close();
+          })();
+          EOF
       - name: Evaluate accessibility
         uses: trongduc2206/accessibility-hub-runner@2c20526390447fd8026272d9e37561cc76373950
         with:
