@@ -1,0 +1,27 @@
+name: GitHub Actions
+run-name: CI Workflow with Accessibility Testing
+on:
+  push:
+    branches: [main]
+jobs:
+  accessibility-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20.x
+      - name: Install dependencies
+        run: npm install
+      - name: Start app
+        run: |
+          npm start &
+          sleep 10
+      - name: Evaluate accessibility
+        uses: trongduc2206/accessibility-hub-runner@2c20526390447fd8026272d9e37561cc76373950
+        with:
+          url: 'http://localhost:3000'
+          service_id: 'uomoecommerce39192'
+          tools: 'axe'
