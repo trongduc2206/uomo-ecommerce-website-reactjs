@@ -30,6 +30,8 @@ jobs:
           done
           echo "❌ App did not start in time" >&2
           exit 1
+      - name: Debug fetch home page HTML
+        run: curl -s http://localhost:3000 | head -n 40
       - name: Evaluate accessibility
         uses: trongduc2206/accessibility-hub-runner@2c20526390447fd8026272d9e37561cc76373950
         with:
