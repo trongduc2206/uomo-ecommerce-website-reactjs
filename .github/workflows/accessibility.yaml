@@ -17,8 +17,13 @@ jobs:
         run: npm install
       - name: Start app
         run: |
-          HOST=0.0.0.0 PORT=3000 npm start &
-          sleep 30
+          HOST=0.0.0.0 PORT=3000 npm start
+      - name: Wait for app
+        run: |
+          for i in {1..35}; do
+            curl -s http://localhost:3000 && break
+            sleep 1
+          done
       - name: Evaluate accessibility
         uses: trongduc2206/accessibility-hub-runner@2c20526390447fd8026272d9e37561cc76373950
         with:
