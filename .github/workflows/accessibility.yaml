@@ -17,13 +17,19 @@ jobs:
         run: npm install
       - name: Start app
         run: |
-          HOST=0.0.0.0 PORT=3000 npm start
+          HOST=0.0.0.0 PORT=3000 npm start &
       - name: Wait for app
         run: |
+          echo "Waiting for app to be ready..."
           for i in {1..35}; do
-            curl -s http://localhost:3000 && break
+            if curl -s http://localhost:3000 > /dev/null; then
+              echo "✅ App is up and running at http://localhost:3000"
+              exit 0
+            fi
             sleep 1
           done
+          echo "❌ App did not start in time" >&2
+          exit 1
       - name: Evaluate accessibility
         uses: trongduc2206/accessibility-hub-runner@2c20526390447fd8026272d9e37561cc76373950
         with:
