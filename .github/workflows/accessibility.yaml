@@ -20,11 +20,11 @@ jobs:
         run: npm run build
 
       - name: Install static server
-        run: npm install -g http-server
+        run: npm install -g serve
 
       - name: Start server
         run: |
-          http-server ./build -p 3000 &
+          serve -s build &
           sleep 5 # Wait for server to start
       - name: Wait for app
         run: |
