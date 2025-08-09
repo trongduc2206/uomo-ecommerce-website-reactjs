@@ -71,7 +71,8 @@ jobs:
           name: page-screenshot
           path: page.png
       - name: Evaluate accessibility
-        uses: trongduc2206/accessibility-hub-runner@2c20526390447fd8026272d9e37561cc76373950
+        # uses: trongduc2206/accessibility-hub-runner@2c20526390447fd8026272d9e37561cc76373950
+        uses: trongduc2206/accessibility-hub-runner@d86666d2a2e575543f0d450a9ae1cbe559e541a2
         with:
           url: 'http://localhost:3000'
           service_id: 'uomoecommerce39192'
