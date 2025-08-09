@@ -40,19 +40,28 @@ jobs:
           exit 1
       - name: Debug fetch home page HTML
         run: curl -s http://localhost:3000 | head -n 40
-      - name: Debug Screenshot page with Playwright
+      - name: Install Playwright
+        run: npm install playwright --no-save
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
+
+      # 🔍 Debug what's actually rendering in CI
+      - name: Debug: Screenshot page with Playwright
         run: |
-          npm install -g playwright
-          npx playwright install chromium
-          node - <<EOF
+          node - <<'EOF'
           const { chromium } = require('playwright');
           (async () => {
             const browser = await chromium.launch();
             const page = await browser.newPage();
+            page.on('pageerror', err => console.error('❌ Page error:', err.message));
+            page.on('console', msg => console.log(`🖥 Console: ${msg.type()} - ${msg.text()}`));
             await page.goto('http://localhost:3000', { waitUntil: 'networkidle' });
-            await page.screenshot({ path: 'page.png' });
+            await page.screenshot({ path: 'page.png', fullPage: true });
             const content = await page.content();
-            console.log('PAGE CONTENT:', content.slice(0, 1000));
+            console.log("=== First 1000 chars of rendered HTML ===");
+            console.log(content.slice(0, 1000));
+            console.log("=== End HTML preview ===");
             await browser.close();
           })();
           EOF
