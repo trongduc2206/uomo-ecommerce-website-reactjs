@@ -38,38 +38,38 @@ jobs:
           done
           echo "❌ App did not start in time" >&2
           exit 1
-      - name: Debug fetch home page HTML
-        run: curl -s http://localhost:3000 | head -n 40
-      - name: Install Playwright
-        run: npm install playwright --no-save
+      # - name: Debug fetch home page HTML
+      #   run: curl -s http://localhost:3000 | head -n 40
+      # - name: Install Playwright
+      #   run: npm install playwright --no-save
 
-      - name: Install Playwright Chromium
-        run: npx playwright install chromium
+      # - name: Install Playwright Chromium
+      #   run: npx playwright install chromium
 
-      # 🔍 Debug what's actually rendering in CI
-      - name: Debug Screenshot page with Playwright
-        run: |
-          node - <<'EOF'
-          const { chromium } = require('playwright');
-          (async () => {
-            const browser = await chromium.launch();
-            const page = await browser.newPage();
-            page.on('pageerror', err => console.error('❌ Page error:', err.message));
-            page.on('console', msg => console.log(`🖥 Console: ${msg.type()} - ${msg.text()}`));
-            await page.goto('http://localhost:3000', { waitUntil: 'networkidle' });
-            await page.screenshot({ path: 'page.png', fullPage: true });
-            const content = await page.content();
-            console.log("=== First 1000 chars of rendered HTML ===");
-            console.log(content.slice(0, 1000));
-            console.log("=== End HTML preview ===");
-            await browser.close();
-          })();
-          EOF
-      - name: Upload Playwright screenshot
-        uses: actions/upload-artifact@v4
-        with:
-          name: page-screenshot
-          path: page.png
+      # # 🔍 Debug what's actually rendering in CI
+      # - name: Debug Screenshot page with Playwright
+      #   run: |
+      #     node - <<'EOF'
+      #     const { chromium } = require('playwright');
+      #     (async () => {
+      #       const browser = await chromium.launch();
+      #       const page = await browser.newPage();
+      #       page.on('pageerror', err => console.error('❌ Page error:', err.message));
+      #       page.on('console', msg => console.log(`🖥 Console: ${msg.type()} - ${msg.text()}`));
+      #       await page.goto('http://localhost:3000', { waitUntil: 'networkidle' });
+      #       await page.screenshot({ path: 'page.png', fullPage: true });
+      #       const content = await page.content();
+      #       console.log("=== First 1000 chars of rendered HTML ===");
+      #       console.log(content.slice(0, 1000));
+      #       console.log("=== End HTML preview ===");
+      #       await browser.close();
+      #     })();
+      #     EOF
+      # - name: Upload Playwright screenshot
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: page-screenshot
+      #     path: page.png
       - name: Evaluate accessibility
         # uses: trongduc2206/accessibility-hub-runner@2c20526390447fd8026272d9e37561cc76373950
         uses: trongduc2206/accessibility-hub-runner@d86666d2a2e575543f0d450a9ae1cbe559e541a2
