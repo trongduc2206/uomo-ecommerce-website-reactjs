@@ -47,7 +47,7 @@ jobs:
         run: npx playwright install chromium
 
       # 🔍 Debug what's actually rendering in CI
-      - name: Debug: Screenshot page with Playwright
+      - name: Debug Screenshot page with Playwright
         run: |
           node - <<'EOF'
           const { chromium } = require('playwright');
