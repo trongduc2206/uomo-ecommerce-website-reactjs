@@ -118,7 +118,7 @@ const Trendy = () => {
                 {StoreData.slice(0, 8).map((product) => (
                   <div className="trendyProductContainer" key={product.id}>
                     <div className="trendyProductImages">
-                      <Link to="/Product" onClick={scrollToTop}>
+                      <Link to="/Product" onClick={scrollToTop} aria-label="View product details">
                         <img
                           src={product.frontImg}
                           alt=""
@@ -184,7 +184,7 @@ const Trendy = () => {
                   .map((product) => (
                     <div className="trendyProductContainer" key={product.id}>
                       <div className="trendyProductImages">
-                        <Link to="/Product" onClick={scrollToTop}>
+                        <Link to="/Product" onClick={scrollToTop} aria-label="View product details">
                           <img
                             src={product.frontImg}
                             alt=""
@@ -252,7 +252,7 @@ const Trendy = () => {
                   .map((product) => (
                     <div className="trendyProductContainer" key={product.id}>
                       <div className="trendyProductImages">
-                        <Link to="/Product" onClick={scrollToTop}>
+                        <Link to="/Product" onClick={scrollToTop} aria-label="View product details">
                           <img
                             src={product.frontImg}
                             alt=""
@@ -320,7 +320,7 @@ const Trendy = () => {
                   .map((product) => (
                     <div className="trendyProductContainer" key={product.id}>
                       <div className="trendyProductImages">
-                        <Link to="/Product">
+                        <Link to="/Product" arial-label="View product name" aria-label="View product details">
                           <img
                             src={product.frontImg}
                             alt=""
