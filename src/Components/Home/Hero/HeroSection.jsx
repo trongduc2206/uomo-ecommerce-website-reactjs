@@ -60,18 +60,22 @@ const HeroSection = () => {
             <button
               onClick={() => changeColor("#353933")}
               style={{ backgroundColor: "#353933" }}
+              aria-label="Change color to dark green"
             ></button>
             <button
               onClick={() => changeColor("#EFBD4E")}
               style={{ backgroundColor: "#EFBD4E" }}
+              aria-label="Change color to light yellow"
             ></button>
             <button
               onClick={() => changeColor("#726DE7")}
               style={{ backgroundColor: "#726DE7" }}
+              aria-label="Change color to blue"
             ></button>
             <button
               onClick={() => changeColor("red")}
               style={{ backgroundColor: "red" }}
+              aria-label="Change color to red"
             ></button>
           </div>
         </div>
