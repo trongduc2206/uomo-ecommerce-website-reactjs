@@ -105,7 +105,7 @@ const RelatedProducts = () => {
                         />
                       </div>
                       <div className="productNameInfo">
-                        <h5 onClick={scrollToTop}>{product.productName}</h5>
+                        <h3 onClick={scrollToTop}>{product.productName}</h3>
                         <p>${product.productPrice}</p>
                         <div className="productRatingReviews">
                           <div className="productRatingStar">

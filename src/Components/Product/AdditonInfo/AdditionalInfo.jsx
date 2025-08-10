@@ -102,23 +102,23 @@ const AdditionalInfo = () => {
             {activeTab === "aiTab2" && (
               <div className="aiTabAdditionalInfo">
                 <div className="additionalInfoContainer">
-                  <h6>Weight</h6>
+                  <h4>Weight</h4>
                   <p> 1.25 kg</p>
                 </div>
                 <div className="additionalInfoContainer">
-                  <h6>Dimensions</h6>
+                  <h4>Dimensions</h4>
                   <p> 90 x 60 x 90 cm</p>
                 </div>
                 <div className="additionalInfoContainer">
-                  <h6>Size</h6>
+                  <h4>Size</h4>
                   <p> XS, S, M, L, XL</p>
                 </div>
                 <div className="additionalInfoContainer">
-                  <h6>Color</h6>
+                  <h4>Color</h4>
                   <p> Black, Orange, White</p>
                 </div>
                 <div className="additionalInfoContainer">
-                  <h6>Storage</h6>
+                  <h4>Storage</h4>
                   <p> Relaxed fit shirt-style dress with a rugged</p>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const AdditionalInfo = () => {
                       <div className="userReviewContent">
                         <div className="userReviewTopContent">
                           <div className="userNameRating">
-                            <h6>Janice Miller</h6>
+                            <h4>Janice Miller</h4>
                             <div className="userRating">
                               <FaStar color="#FEC78A" size={10} />
                               <FaStar color="#FEC78A" size={10} />
@@ -174,7 +174,7 @@ const AdditionalInfo = () => {
                       <div className="userReviewContent">
                         <div className="userReviewTopContent">
                           <div className="userNameRating">
-                            <h6>Benjam Porter</h6>
+                            <h4>Benjam Porter</h4>
                             <div className="userRating">
                               <FaStar color="#FEC78A" size={10} />
                               <FaStar color="#FEC78A" size={10} />
@@ -200,10 +200,10 @@ const AdditionalInfo = () => {
                   </div>
                   <div className="userNewReview">
                     <div className="userNewReviewMessage">
-                      <h5>
+                      <h3>
                         Be the first to review “Lightweight Puffer Jacket With a
                         Hood”
-                      </h5>
+                      </h3>
                       <p>
                         Your email address will not be published. Required
                         fields are marked *

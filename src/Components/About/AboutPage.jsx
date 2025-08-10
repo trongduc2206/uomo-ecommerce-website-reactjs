@@ -44,14 +44,14 @@ const AboutPage = () => {
           </p>
           <div className="content1">
             <div className="contentBox">
-              <h5>Our Mission</h5>
+              <h3>Our Mission</h3>
               <p>
                 Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo consequat.
               </p>
             </div>
             <div className="contentBox">
-              <h5>Our Vision</h5>
+              <h3>Our Vision</h3>
               <p>
                 Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                 commodo consequat.
@@ -63,7 +63,7 @@ const AboutPage = () => {
               <img src={about2} alt="" />
             </div>
             <div className="textContent">
-              <h5>The Company</h5>
+              <h3>The Company</h3>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
                 sapien dignissim a elementum. Sociis metus, hendrerit mauris id
@@ -78,7 +78,7 @@ const AboutPage = () => {
       </div>
       <Services />
       <div className="companyPartners">
-        <h5>Company Partners</h5>
+        <h3>Company Partners</h3>
         <Swiper
           slidesPerView={1}
           loop={true}

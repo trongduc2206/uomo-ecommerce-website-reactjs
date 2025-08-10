@@ -50,7 +50,7 @@ const BlogDetails = () => {
               fermentum iaculis pharetra, maecenas dui nullam nullam rhoncus.
               Facilisis quis vulputate sem gravida lacus, justo placerat.
             </p>
-            <h5>Sed do eiusmod tempor incididunt ut labore</h5>
+            <h3>Sed do eiusmod tempor incididunt ut labore</h3>
             <p>
               Saw wherein fruitful good days image them, midst, waters upon,
               saw. Seas lights seasons. Fourth hath rule Evening Creepeth own
@@ -63,7 +63,7 @@ const BlogDetails = () => {
             </p>
             <div className="blogDetailsContentBullets">
               <div className="blogDetailsContentBulletscontent">
-                <h5>Why choose product?</h5>
+                <h3>Why choose product?</h3>
                 <p>
                   <ul>
                     <li>Creat by cotton fibric with soft and smooth</li>
@@ -75,7 +75,7 @@ const BlogDetails = () => {
                 </p>
               </div>
               <div className="blogDetailsContentBulletscontent">
-                <h5>Sample Number List</h5>
+                <h3>Sample Number List</h3>
                 <p>
                   <ol>
                     <li>Creat by cotton fibric with soft and smooth</li>

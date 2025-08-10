@@ -29,7 +29,7 @@ const HeroSection = () => {
           <span>Limited Time Offer - Up to 60% off & Free Shipping</span>
           <div className="heroLink">
             <Link to="/shop" onClick={scrollToTop}>
-              <h5>Discover More</h5>
+              <h2>Discover More</h2>
             </Link>
           </div>
         </div>

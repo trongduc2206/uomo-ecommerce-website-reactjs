@@ -155,7 +155,7 @@ const Trendy = () => {
                       </div>
                       <div className="trendyProductNameInfo">
                         <Link to="product" onClick={scrollToTop}>
-                          <h5>{product.productName}</h5>
+                          <h3>{product.productName}</h3>
                         </Link>
 
                         <p>${product.productPrice}</p>
@@ -223,7 +223,7 @@ const Trendy = () => {
                         </div>
                         <div className="trendyProductNameInfo">
                           <Link to="product" onClick={scrollToTop}>
-                            <h5>{product.productName}</h5>
+                            <h3>{product.productName}</h3>
                           </Link>
 
                           <p>${product.productPrice}</p>
@@ -291,7 +291,7 @@ const Trendy = () => {
                         </div>
                         <div className="trendyProductNameInfo">
                           <Link to="product" onClick={scrollToTop}>
-                            <h5>{product.productName}</h5>
+                            <h3>{product.productName}</h3>
                           </Link>
 
                           <p>${product.productPrice}</p>
@@ -359,7 +359,7 @@ const Trendy = () => {
                         </div>
                         <div className="trendyProductNameInfo">
                           <Link to="/product" onClick={scrollToTop}>
-                            <h5>{product.productName}</h5>
+                            <h3>{product.productName}</h3>
                           </Link>
 
                           <p>${product.productPrice}</p>

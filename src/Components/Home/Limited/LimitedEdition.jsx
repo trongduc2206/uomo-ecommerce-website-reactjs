@@ -159,7 +159,7 @@ const LimitedEdition = () => {
                       </div>
                       <div className="productNameInfo">
                         <Link to="/Product" onClick={scrollToTop}>
-                          <h5>{product.productName}</h5>
+                          <h3>{product.productName}</h3>
                         </Link>
                         <p>${product.productPrice}</p>
                         <div className="productRatingReviews">

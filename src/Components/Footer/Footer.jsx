@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
 
           <div className="footer_content">
-            <h5>Company</h5>
+            <h3>Company</h3>
             <div className="links_container">
               <ul onClick={scrollToTop}>
                 <li>
@@ -73,7 +73,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer_content">
-            <h5>Shop</h5>
+            <h3>Shop</h3>
             <div className="links_container">
               <ul onClick={scrollToTop}>
                 <li>
@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer_content">
-            <h5>Help</h5>
+            <h3>Help</h3>
             <div className="links_container">
               <ul onClick={scrollToTop}>
                 <li>
@@ -120,7 +120,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer_right">
-            <h5>Subscribe</h5>
+            <h3>Subscribe</h3>
             <p>
               Be the first to get the latest news about trends, promotions, and
               much more!
@@ -131,7 +131,7 @@ const Footer = () => {
               <button type="submit">Join</button>
             </form>
 
-            <h6>Secure Payments</h6>
+            <h4>Secure Payments</h4>
             <div className="paymentIconContainer">
               <img src={paymentIcon} alt="" />
             </div>
