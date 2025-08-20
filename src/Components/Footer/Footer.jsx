@@ -161,8 +161,8 @@ const Footer = () => {
               </select>
             </div>
             <div className="footerCurrency">
-              <p>Currency</p>
-              <select name="currency" id="currency">
+              <label htmlFor="currency">Currency</label>
+              <select name="currency" id="currency" aria-labelledby="currency">
                 <option value="USD">$ USD</option>
                 <option value="INR">₹ INR</option>
                 <option value="EUR">€ EUR</option>

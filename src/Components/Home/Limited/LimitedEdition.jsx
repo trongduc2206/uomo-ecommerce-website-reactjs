@@ -78,7 +78,8 @@ const LimitedEdition = () => {
 
   return (
     <>
-      <div className="limitedProductSection">
+      {/* <div className="limitedProductSection"> */}
+      <section className="limitedProductSection" aria-label="Limited Edition Section">
         <h2>
           Limited <span>Edition</span>
         </h2>
@@ -181,7 +182,8 @@ const LimitedEdition = () => {
             })}
           </Swiper>
         </div>
-      </div>
+      </section>
+      {/* </div> */}
     </>
   );
 };

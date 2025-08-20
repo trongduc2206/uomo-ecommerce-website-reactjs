@@ -13,7 +13,8 @@ const CollectionBox = () => {
 
   return (
     <>
-      <div className="collection">
+      {/* <div className="collection"> */}
+      <section className="collection" aria-label="Collection Section">
         <div className="collectionLeft">
           <p className="col-p">Hot List</p>
           <h3 className="col-h3">
@@ -64,7 +65,8 @@ const CollectionBox = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      {/* </div> */}
     </>
   );
 };

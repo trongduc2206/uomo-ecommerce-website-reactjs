@@ -175,8 +175,8 @@ const Navbar = () => {
             </div>
             <div className="mobile-menuFooterLangCurrency">
               <div className="mobile-menuFooterLang">
-                <p>Language</p>
-                <select name="language" id="language">
+                <label htmlFor="language">Language</label>
+                <select name="language" id="language" aria-labelledby="language">
                   <option value="english">United States | English</option>
                   <option value="Hindi">Hindi</option>
                   <option value="Germany">Germany</option>
@@ -184,8 +184,8 @@ const Navbar = () => {
                 </select>
               </div>
               <div className="mobile-menuFooterCurrency">
-                <p>Currency</p>
-                <select name="currency" id="currency">
+                <label htmlFor="currency">Currency</label>
+                <select name="currency" id="currency" aria-labelledby="currency">
                   <option value="USD">$ USD</option>
                   <option value="INR">₹ INR</option>
                   <option value="EUR">€ EUR</option>

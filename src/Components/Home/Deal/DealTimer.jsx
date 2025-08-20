@@ -61,7 +61,8 @@ const DealTimer = () => {
 
   return (
     <>
-      <div className="mainDeal">
+      {/* <div className="mainDeal"> */}
+      <section className="mainDeal" aria-label="Deal of the Week Section">
         <div className="dealTimer">
           <div className="dealTimerMainContent">
             <div className="dealTimeContent">
@@ -99,7 +100,8 @@ const DealTimer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+      {/* </div> */}
     </>
   );
 };

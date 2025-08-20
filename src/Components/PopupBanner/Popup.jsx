@@ -21,10 +21,13 @@ const Popup = () => {
           <button className="close-button" onClick={handleClose}>
             ×
           </button>
-          <div className="popup-left">
+          {/* <div className="popup-left"> */}
+          <section aria-label="Newsletter Image" className="popup-left">
             <img src={popupImg} alt="Newsletter" />
-          </div>
-          <div className="popup-right">
+          </section>
+          {/* </div> */}
+          {/* <div className="popup-right"> */}
+          <section aria-label="Newsletter Content" className="popup-right">
             <h2>Sign Up to Our Newsletter</h2>
             <p>
               Be the first to get the latest news about trends, promotions, and
@@ -34,7 +37,8 @@ const Popup = () => {
               <input type="email" placeholder="Your email address" required />
               <button type="submit">JOIN</button>
             </form>
-          </div>
+          {/* </div> */}
+          </section>
         </div>
       </div>
     )

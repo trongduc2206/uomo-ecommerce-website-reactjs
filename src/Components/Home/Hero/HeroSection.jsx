@@ -23,7 +23,8 @@ const HeroSection = () => {
   return (
     <>
       <div className="heroMain">
-        <div className="sectionleft">
+        {/* <div className="sectionleft"> */}
+        <section className="sectionleft" aria-label="Hero Section Content">
           <p>New Trend</p>
           <h1>Summer Sale Stylish</h1>
           <span>Limited Time Offer - Up to 60% off & Free Shipping</span>
@@ -32,8 +33,10 @@ const HeroSection = () => {
               <h2>Discover More</h2>
             </Link>
           </div>
-        </div>
-        <div className="sectionright">
+        </section>
+        {/* </div> */}
+        {/* <div className="sectionright"> */}
+        <section className="sectionright" aria-label="Hero Section Image">
           <Canvas
             className="canvasModel"
             camera={{ position: [0, 5, 15], fov: 50 }}
@@ -78,7 +81,8 @@ const HeroSection = () => {
               aria-label="Change color to red"
             ></button>
           </div>
-        </div>
+        {/* </div> */}
+        </section>
       </div>
     </>
   );

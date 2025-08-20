@@ -13,7 +13,8 @@ const Banner = () => {
 
   return (
     <>
-      <div className="banner">
+      {/* <div className="banner"> */}
+      <section className="banner" aria-label="Banner Section">
         <div className="bannerLeft">
           <h3 className="bannerh6">Starting At $19</h3>
           <h3 className="bannerh3">Women's T-shirts</h3>
@@ -36,7 +37,8 @@ const Banner = () => {
             </Link>
           </h3>
         </div>
-      </div>
+      </section>
+      {/* </div> */}
     </>
   );
 };

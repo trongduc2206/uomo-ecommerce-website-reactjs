@@ -80,7 +80,8 @@ const Trendy = () => {
 
   return (
     <>
-      <div className="trendyProducts">
+      {/* <div className="trendyProducts"> */}
+      <section className="trendyProducts" aria-label="Trendy Products Section">
         <h2>
           Our Trendy <span>Products</span>
         </h2>
@@ -386,7 +387,8 @@ const Trendy = () => {
             <p>Discover More</p>
           </Link>
         </div>
-      </div>
+      </section>
+      {/* </div> */}
     </>
   );
 };

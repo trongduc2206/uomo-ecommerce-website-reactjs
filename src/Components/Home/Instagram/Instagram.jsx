@@ -16,7 +16,8 @@ import insta12 from "../../../Assets/Instagram/insta12.jpg";
 const Instagram = () => {
   return (
     <>
-      <div className="instagram">
+      {/* <div className="instagram"> */}
+      <section className="instagram" aria-label="Instagram Section">
         <h2>@UOMO</h2>
         <div className="instagramTiles">
           <div className="instagramtile">
@@ -56,7 +57,8 @@ const Instagram = () => {
             <img src={insta12} alt="" />
           </div>
         </div>
-      </div>
+      </section>
+      {/* </div> */}
     </>
   );
 };

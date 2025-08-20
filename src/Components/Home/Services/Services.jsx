@@ -9,21 +9,21 @@ const Services = () => {
   return (
     <>
       <div className="services">
-        <div className="serviceBox">
+        <section className="serviceBox" aria-label="Service Box 1">
           <FaCartFlatbedSuitcase size={50} style={{ marginBottom: "20px" }} />
           <h3>Fast And Free Delivery</h3>
           <p>Free delivery for all orders over $140</p>
-        </div>
-        <div className="serviceBox">
+        </section>
+        <section className="serviceBox" aria-label="Service Box 2">
           <TfiHeadphoneAlt size={50} style={{ marginBottom: "20px" }} />
           <h3>24/7 Customer Support</h3>
           <p>Friendly 24/7 customer support</p>
-        </div>
-        <div className="serviceBox">
+        </section>
+        <section className="serviceBox" aria-label="Service Box 3">
           <RiShieldCheckLine size={50} style={{ marginBottom: "20px" }} />
           <h3>Money Back Guarantee</h3>
           <p>We return money within 30 days</p>
-        </div>
+        </section>
       </div>
     </>
   );
