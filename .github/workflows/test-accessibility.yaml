@@ -20,10 +20,14 @@ jobs:
         run: npm run build
       
       - name: Install axe-cli
-        run: npm install -g axe-cli
+        run: npm install @axe-core/cli -g
 
       - name: Install static server
         run: npm install -g serve
+
+      - name: Setup Chrome
+        shell: bash
+        run: npx browser-driver-manager install chrome
 
       - name: Start server
         run: |
