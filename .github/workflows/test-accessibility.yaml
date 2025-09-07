@@ -1,0 +1,45 @@
+name: GitHub Actions
+run-name: CI Workflow with Accessibility Testing
+on:
+  push:
+    branches: [before-fix]
+jobs:
+  accessibility-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20.x
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build app
+        run: npm run build
+      
+      - name: Install axe-cli
+        run: npm install -g axe-cli
+
+      - name: Install static server
+        run: npm install -g serve
+
+      - name: Start server
+        run: |
+          serve -s build -l 3000 &
+          sleep 5 # Wait for server to start
+      - name: Wait for app
+        run: |
+          echo "Waiting for app to be ready..."
+          for i in {1..35}; do
+            if curl -s http://localhost:3000 > /dev/null; then
+              echo "✅ App is up and running at http://localhost:3000"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "❌ App did not start in time" >&2
+          exit 1
+      - name: Evaluate accessibility
+        run: axe http://localhost:3000 --exit
