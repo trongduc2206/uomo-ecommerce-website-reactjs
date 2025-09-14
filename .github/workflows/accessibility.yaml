@@ -75,5 +75,5 @@ jobs:
         uses: trongduc2206/accessibility-hub-runner@9b324d2e35ad8569e18f4e548aa11bf907f1adfb
         with:
           url: 'http://localhost:3000'
-          service_id: 'uomoecommerce39192'
+          service_id: 'uomoecommerce60154'
           tools: 'axe'
