@@ -2,7 +2,7 @@ name: GitHub Actions
 run-name: CI Workflow with Accessibility Testing
 on:
   push:
-    branches: [before-fix]
+    branches: [demo-test-2]
 jobs:
   accessibility-test:
     runs-on: ubuntu-latest
