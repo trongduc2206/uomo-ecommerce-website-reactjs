@@ -109,5 +109,5 @@ $ npm start
  </picture>
 </a>
 
-👨‍💻 Happy coding!
+👨‍💻 Happy coding! Test demo
 ---
