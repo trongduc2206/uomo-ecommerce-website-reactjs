@@ -45,5 +45,11 @@ jobs:
           done
           echo "❌ App did not start in time" >&2
           exit 1
+      # - name: Evaluate accessibility
+      #   run: axe http://localhost:3000 --exit
       - name: Evaluate accessibility
-        run: axe http://localhost:3000 --exit
+        uses: trongduc2206/accessibility-hub-runner@9b324d2e35ad8569e18f4e548aa11bf907f1adfb
+        with:
+          url: 'http://localhost:3000'
+          service_id: 'demo371675'
+          tools: 'axe'
